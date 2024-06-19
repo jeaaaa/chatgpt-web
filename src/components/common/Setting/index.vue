@@ -11,6 +11,9 @@ interface Emit {
   (e: 'update:visible', visible: boolean): void
 }
 
+const props = defineProps<Props>()
+const emit = defineEmits<Emit>()
+
 const show = computed({
   get() {
     return props.visible
